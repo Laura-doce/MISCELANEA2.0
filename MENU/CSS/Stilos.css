@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Vidaloka&display=swap);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kalam', cursive;
+    font-family: 'Vidaloka', serif;
+}
+
+body{
+    height: 100vh;
+    background-color: rgb(44, 44, 44);
+    background: url(../Img/fondo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(112, 51, 85);
+    font-size: 1.5rem;
+}
+
+a:hover{
+    color: #ff85c8;
+}
+
+header{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.menu-vertical{
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 140px;
+    background-color: #68365180;
+    border-radius: 20px;
+}
+
+.links li:hover .menu-vertical{
+    display: block;
+}
+
+.menu-vertical li:hover{
+    background-color: #ffe0a786;
+    border-radius: 30px;
+}
+
+.menu-vertical li a{
+    display: block;
+    color: rgb(255, 255, 255);
+    padding: 1px 1px 1px 1px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: rgb(112, 51, 85);
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+} 
+
+section.hero{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(73, 44, 60);
+}
+
+.hero h1{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content{
+    width: 100%;
+    max-width: 450px;
+    background: transparent;
+    border:3px solid rgb(73, 44, 60);
+    padding: 50px 60px 70px;
+    text-align: center;
+    border-radius: 20px;
+    backdrop-filter: blur(19px);
+}
+
+.form-content h1{
+    font-size: 30px;
+    margin-bottom: 60px;
+    color: rgba(46, 24, 36, 0.973);
+    position: relative;
+}
+
+.form-content h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background-color:rgba(46, 24, 36, 0.973) ;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field{
+    background-color: rgba(92, 56, 76, 0.397);
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    transition: max-height 05s;
+    overflow: hidden;
+}
+
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+    padding: 18px 15px;
+    color: #ffff;
+}
+
+input::placeholder{
+    color: #ffff;
+}
+
+.input-field i{
+    margin-left: 15px;
+    color: rgb(51, 30, 41);
+    font-size: 25px;
+}
+
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-field button{
+    flex-basis: 100%;
+    font-size: 20px;
+    background-color: rgb(36, 21, 29);
+    color: #ffffff;
+    height: 40px;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+}

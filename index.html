@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISCELANEA</title>
+    <link rel="stylesheet" href="MENU/CSS/Stilos.css">
+    <link rel="icon" href="MENU/Img/icono.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html">MISCELANEA</a>
+        </div>
+            <ul class="links">
+            <li>
+                <a href="#">Operadores</a>
+            <ul class="menu-vertical">
+                <li><a href="#" onclick="AreaTriangulo()">1</a></li>
+                <li><a href="#" onclick="SumaDosNum()">2</a></li>
+                <li><a href="#" onclick="NumCuadrado()">3</a></li>
+                <li><a href="#" onclick="EuroDolar()">4</a></li>
+                <li><a href="#" onclick="AreaPerimetro()">5</a></li>
+                <li><a href="#" onclick="VolumenCilindro()">6</a></li>
+                <li><a href="#" onclick="RadioCirculo()">7</a></li>
+                <li><a href="#" onclick="Promedio()">8</a></li>
+            </ul>
+            </li>
+            <li>
+                <a href="#">Condicionales</a>
+            <ul class="menu-vertical">
+                <li><a href="#" onclick="NumPositivoNegativo()">1</a></li>
+                <li><a href="#" onclick="MayorMenor()">2</a></li>
+                <li><a href="#" onclick="TresMayorMenor()">3</a></li>
+                <li><a href="#" onclick="SumaResta()">4</a></li>
+                <li><a href="#" onclick="Division()">5</a></li>
+                <li><a href="#" onclick="SumaMultiplicacion()">6</a></li>
+                <li><a href="#" onclick="AñoBisiesto()">7</a></li>
+            </ul>
+            </li>
+            <li>
+                <a href="#">Ciclos</a>
+            <ul class="menu-vertical">
+                <li><a href="#" onclick="MultiplosTres()">1</a></li>
+                <li><a href="#" onclick="NumImpares()">2</a></li>
+                <li><a href="#" onclick="NumPares()">3</a></li>
+                <li><a href="#" onclick="NumCuadrados()">4</a></li>
+                <li><a href="#" onclick="NumSumaNaturales()">5</a></li>
+                <li><a href="#" onclick="NumNaturales()">6</a></li>
+                <li><a href="#" onclick="Suma()">7</a></li>
+            </ul>
+            </li>
+            </ul>
+       </div>
+    </header>
+<section class="hero">
+    <h1>MISCELANEA</h1>
+</section>
+</body>
+
+<script>
+/*OPERADORES*/
+    function AreaTriangulo() {
+        let b = prompt("Ingrese la base del triángulo:");
+        let h = prompt("Ingrese la altura del triángulo:");
+        b = parseFloat(b);
+        h = parseFloat(h);
+
+        let A = b*h/2;
+
+        document.write("<p>El area del triángulo es: <br>" + A + "</p>")
+    } 
+
+    function SumaDosNum() {
+        let num_1 = prompt("Ingrese un número:");
+        let num_2 = prompt("Ingrese otro número:");
+        num_1 = parseFloat(num_1);
+        num_2 = parseFloat(num_2);
+
+        let resul=num_1+num_2;
+
+        document.write("<p>La suma de " + num_1 +" y "+ num_2 +" es: <br>" + resul +"</p>")
+    } 
+
+    function NumCuadrado() {
+        let num = prompt("Ingrese un número:");
+        num = parseFloat(num);
+
+        let result=num**2;
+
+        document.write("<p>El cuadrado de " + num +" es: <br>" + result + "</p>")
+    } 
+
+    function EuroDolar() {
+        let dolar = prompt("Ingrese un valor en dolares:");
+        dolar = parseFloat(dolar);
+
+        const euro = 0.93;
+        let valor=dolar*euro
+
+        document.write("<p>$" + dolar + " equivalen $" +valor+"</p>")
+    } 
+
+    function AreaPerimetro() {
+        let L = prompt("Ingrese el valor de los lados de cuadrado:");
+        L = parseFloat(L);
+
+        let A=L*L
+        let P=L+L+L+L
+
+        document.write("<p>El área del triángulo es: " + A + "cm² y el perimetro es "+ P + "cm² </p>")
+    } 
+
+    function VolumenCilindro() {
+        let r = prompt("Ingrese el valor del r del cilindro:");
+        let h = prompt("Ingrese el valor de la altura del cilindro:");
+        r = parseFloat(r);
+        h = parseFloat(h);
+
+        let A=2*3.1416*r
+        let At=A*(r+h)
+        let V=3.1416*(r)**2
+        let Vt=V*(h)
+
+        document.write("<p>El área del cilindro es " + At + "cm²  el volumen es " + Vt + "cm² </p>")
+    } 
+
+    function RadioCirculo() {
+        let radio = prompt("Ingrese el radio del circulo:");
+        radio = parseFloat(radio);
+
+        let L=2*3.1416*radio;
+        let A=(3.1416*radio)**2;
+
+        document.write("<p>El longitud es " + L + "m y el area es " + A + "m² </p>")
+    } 
+
+    function Promedio() {
+        let num1 = prompt("Ingrese un número:");
+        let num2 = prompt("Ingrese otro número:");
+        let num3 = prompt("Ingrese otro número:");
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+        num3 = parseFloat(num3);
+
+        let promedio=(num1+num2+num3)/3;
+
+        document.write("<p>El promedio es: <br>" + promedio + "</p>")
+    } 
+
+/*CONDICIONALES*/ 
+
+    function NumPositivoNegativo() {
+        let num = prompt("Ingrese un número:");
+        num = parseFloat(num);
+
+        if (num==0){
+            document.write("<p>El número " + num + " es igual a 0. </p>");
+        }else if(num > 1){
+            document.write("<p>El número " + num + " es positivo </p>");
+        }else if(num < -1){
+            document.write("<p>El número " + num + " es negativo </p>");
+        }
+        else{
+            document.write("<p>¡Ingrese un número! </p>");
+        }    
+    } 
+
+    function MayorMenor() {
+        let num1 = prompt("Ingrese un número:");
+        let num2 = prompt("Ingrese otro número:");
+        num1 = parseFloat(num1);
+        num2 = parseFloat(num2);
+
+        if (num1 > num2){
+            document.write("<p>El número " + num1 +" es mayor y el número "+ num2 +" es menor. </p>");
+        }else if(num1 < num2){
+            document.write("<p>El número "+ num2 +" es mayor y el número "+ num1 +" es menor. </p>");
+        }
+    } 
+
+    function TresMayorMenor() {
+        let num_1 = prompt("Ingrese un número:");
+        let num_2 = prompt("Ingrese otro número:");        
+        let num_3 = prompt("Ingrese otro número:");
+        num_1 = parseFloat(num_1);
+        num_2 = parseFloat(num_2);
+        num_3 = parseFloat(num_3);
+        if (num_1 > num_3 && num_1 > num_2){
+            document.write("<p>El número mayor es " + num_1 +" y el número menor es " + num_3 +"</p>");
+        }else if(num_2 > num_1 && num_2 > num_3){
+            document.write("<p>El número mayor es " + num_2 +" y el número menor es " + num_1 +"</p>");
+        }else if(num_3 > num_2 && num_3 < num_1){
+            document.write("<p>El número mayor es " + num_3 +" y el número menor es " + num_2 +"</p>");
+        }else{
+            document.write("<p>¡Ingrese valor enteros!</p>");
+        }
+    } 
+
+    function SumaResta() {
+        let n1 = prompt("Ingrese un número:");
+        let n2 = prompt("Ingrese otro número:");
+        n1 = parseFloat(n1);
+        n2 = parseFloat(n2);
+
+        if (n1 < n2 ){
+            Suma=n1+n2
+            document.write("<p>El resultado es " + Suma +"</p>");
+        }else{
+            Resta=n1-n2
+            document.write("<p>El resultado es " + Resta +"</p>");
+        }
+    } 
+
+    function Division() {
+        let A = prompt("Ingrese un número:");
+        let B = prompt("Ingrese otro número:");
+        A = parseFloat(A);
+        B = parseFloat(B);
+        let Division;
+
+        switch (Division) {
+            case Division:
+                divi=A/B
+                document.write("<p>El cociente es: <br>" + divi + "</p>");
+                break;
+                default:
+                document.write("<p>La division no es posible, ¡por favor ingrese un valor correcto! </p>");
+                    break;
+                }
+    } 
+
+    function SumaMultiplicacion() {
+        let x = prompt("Ingrese un número:");
+        let l = prompt("Ingrese otro número:");
+        x = parseFloat(x);
+        l = parseFloat(l);
+
+        if (x < -1 && l > 1) {
+            suma=x+l
+            document.write("<p>El resultado es: <br>" + suma + "</p>");  
+        }else if(x > 1){
+            multiplicacion=x*l
+            document.write("<p>El resultado es: <br>" + multiplicacion + "</p>");
+        }else{
+            document.write("<p> ¡Ingrese otro valor! </p>");
+        }
+    } 
+
+    function AñoBisiesto() {
+        let año = prompt("Ingrese un año:");
+        año = parseFloat(año);
+
+        if ((año%4==0) && (año/100 != 0 || año%400==0)){
+            document.write("<p> El año es bisiesto </p>");
+        }else{
+            document.write("<p> El año no es bisiesto </p>");
+        }
+    } 
+
+/*CICLOS*/
+    function MultiplosTres() {
+        for (let n = 0; n < 101; n+=3){            
+            document.write("<p>"+n+"</p>");
+        }    
+    } 
+
+    function NumImpares() {
+        for (let i = 1; i <=100; i+=2){
+            document.write("<p>"+i+"</p>");
+        }
+    } 
+
+    function NumPares() {
+        for (let i = 0; i <=101; i+=2){
+            document.write("<p>"+i+"</p>");
+        }
+    } 
+
+    function NumCuadrados() {
+        for (let n = 1; n <= 30; n++){
+            R=n**4
+            document.write("<p>"+R+"</p>");
+        }
+    } 
+
+    function NumSumaNaturales() {
+        for (let z = 1; z <= 100; z++){
+            N=z**4
+            R=N+N
+            document.write("<p>"+R+"</p>");
+        }
+    } 
+
+    function NumNaturales() {
+        let n = prompt("Ingrese un número:");
+        let i = prompt("Ingrese otro número:");
+        n = parseFloat(n);
+        i = parseFloat(i);
+
+        let z=n
+
+        while (z <= i) {
+            document.write("<p>"+z+"</p>");
+            z++;
+        }    
+    } 
+
+    function Suma() {
+        let T = prompt("Ingrese un número:");
+        let K= prompt("Ingrese otro número:");        
+        let M = prompt("Ingrese otro número:");   
+        T = parseFloat(T);
+        K = parseFloat(K);
+        M = parseFloat(M);
+
+        do {
+            suma =  T + K + M;
+            document.write("<p>"+suma+"</p>");
+        } while (suma <= 0);
+    } 
+
+</script>
+</html>
